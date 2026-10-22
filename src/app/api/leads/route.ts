@@ -33,5 +33,5 @@ export async function POST(request: Request) {
 
   console.info("[lead]", stored.source, stored.intent, stored.email, score.tier, score.score);
 
-  return Response.json({ ok: true, id: stored.id, tier: score.tier });
+  return Response.json({ ok: true, id: stored.id, tier: score.tier, score: score.score, reasons: score.reasons });
 }

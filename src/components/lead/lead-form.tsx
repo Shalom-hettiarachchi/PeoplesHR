@@ -2,7 +2,9 @@
 
 import { useId, useState, type FormEvent, type ReactNode } from "react";
 import { leadSchema, ROLES, type LeadContext, type LeadIntent, type LeadSource } from "@/lib/leads/schema";
+import type { LeadTier } from "@/lib/leads/score";
 import { track } from "@/lib/analytics";
+import { saveDemoLead } from "@/lib/demo-store";
 import { Button } from "@/components/ui/button";
 
 type Status = "idle" | "submitting" | "success" | "error";
@@ -71,8 +73,24 @@ export function LeadForm({ source, intent, context = {}, submitLabel, extended, 
         body: JSON.stringify(payload),
       });
       if (!res.ok) throw new Error(`Request failed: ${res.status}`);
-      const data: { tier?: string } = await res.json();
+      const data: { id?: string; tier?: LeadTier; score?: number; reasons?: string[] } = await res.json();
       track("lead_submitted", { source, intent, tier: data.tier });
+      if (data.tier) {
+        saveDemoLead({
+          id: data.id ?? String(Date.now()),
+          at: new Date().toISOString(),
+          source,
+          intent,
+          email: parsed.data.email,
+          firstName: parsed.data.firstName,
+          company: parsed.data.company,
+          role: parsed.data.role,
+          context,
+          tier: data.tier,
+          score: data.score ?? 0,
+          reasons: data.reasons ?? [],
+        });
+      }
       setStatus("success");
       onSuccess?.();
     } catch {

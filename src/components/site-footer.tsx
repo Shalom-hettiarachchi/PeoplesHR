@@ -40,7 +40,10 @@ export function SiteFooter() {
       </div>
       <p className="border-t border-ink-200 px-4 py-5 text-center text-xs text-ink-500">
         Prototype built for the PeoplesHR Web Experience Engineer assessment. Product names,
-        packages and figures are illustrative.
+        packages and figures are illustrative.{" "}
+        <Link href="/demo" className="font-medium text-brand-700 underline underline-offset-2">
+          See what sales sees
+        </Link>
       </p>
     </footer>
   );
