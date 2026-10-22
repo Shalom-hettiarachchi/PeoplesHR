@@ -1,0 +1,62 @@
+import type { Checklist, ChecklistId } from "./types";
+
+/** Practical checklists offered in return for an email. The value comes first. */
+export const CHECKLISTS: Record<ChecklistId, Checklist> = {
+  "payroll-accuracy": {
+    id: "payroll-accuracy",
+    title: "Payroll accuracy checklist",
+    pitch: "12 checks to run before you approve every pay run. Print it or keep it open next to payroll.",
+    items: [
+      { text: "All pay changes received before the cut-off date", detail: "Anything later goes into next month's run, not a last-minute edit." },
+      { text: "New joiners set up with contract, bank and tax details", detail: "Check start dates against the pay period so you pay the right number of days." },
+      { text: "Leavers' final pay and leave balances calculated", detail: "Include unused leave, notice pay and any recoveries." },
+      { text: "Approved leave and unpaid absence reflected", detail: "Match payroll against the leave system, not an email thread." },
+      { text: "Overtime, shift and allowance claims approved", detail: "Only pay what a manager has signed off." },
+      { text: "Pay rate changes match signed letters", detail: "Raises, promotions and role changes, with the right effective date." },
+      { text: "Statutory rates and thresholds up to date", detail: "Tax bands, social security rates and minimum wage, especially at the start of a tax year." },
+      { text: "Total cost compared with last month", detail: "Investigate any change above 3% that you can't explain." },
+      { text: "Individual changes above 10% reviewed", detail: "Big swings are where most errors hide." },
+      { text: "Second person has reviewed the run", detail: "The person who prepared payroll shouldn't be the only one to approve it." },
+      { text: "Bank file totals match the payroll report", detail: "Check headcount and net pay before uploading." },
+      { text: "Payslips and filings ready to release on time", detail: "Note any corrections for next month so the cause gets fixed." },
+    ],
+  },
+  "leave-policy": {
+    id: "leave-policy",
+    title: "Leave policy and tracking checklist",
+    pitch: "10 things to settle so leave is fair, easy to request and never a payroll surprise.",
+    items: [
+      { text: "Leave types defined", detail: "Annual, sick, parental, unpaid and any company-specific leave." },
+      { text: "Entitlements meet or beat local law", detail: "Check every country you employ people in." },
+      { text: "Accrual method agreed", detail: "Up-front at the start of the year, or monthly as people work." },
+      { text: "Carry-over and expiry rules written down", detail: "How many days roll over, and when they expire." },
+      { text: "One way to request leave", detail: "Not email, chat and spreadsheets at the same time." },
+      { text: "Approvers and backups named", detail: "So requests don't stall when a manager is away." },
+      { text: "Notice periods set for each leave type", detail: "And what happens with short-notice requests." },
+      { text: "Team calendars visible to managers", detail: "To avoid everyone being off at once." },
+      { text: "Unpaid leave and absence flow into payroll", detail: "Agree a cut-off so payroll always has the full picture." },
+      { text: "Employees can see their own balance", detail: "This removes most of the questions HR gets about leave." },
+    ],
+  },
+  "hr-software-buyers": {
+    id: "hr-software-buyers",
+    title: "HR and payroll software buyer's checklist",
+    pitch: "14 questions to ask any vendor, so you can compare options like for like.",
+    items: [
+      { text: "Does it run payroll in every country we employ people?", detail: "Or will we need a separate provider for some?" },
+      { text: "Who keeps statutory rates up to date?", detail: "And how quickly are changes applied?" },
+      { text: "Do leave and attendance flow straight into payroll?", detail: "Without exports or re-keying." },
+      { text: "Can employees use it on their phones?", detail: "For payslips, leave and simple requests." },
+      { text: "How are approvals configured?", detail: "Can we set different chains for different teams or countries?" },
+      { text: "What reports come out of the box?", detail: "Headcount, cost, turnover, absence, statutory filings." },
+      { text: "Does it connect to our accounting system?", detail: "Ask for a list of existing integrations and API access." },
+      { text: "How long does implementation take?", detail: "And what do you need from us?" },
+      { text: "How is our existing data migrated?", detail: "Who does it, and how is it checked?" },
+      { text: "What does support look like after go-live?", detail: "Local time zones, response times and named contacts." },
+      { text: "Where is our data stored and who can access it?", detail: "Ask about security certifications and access controls." },
+      { text: "How is pricing calculated?", detail: "Per employee, per module, set-up fees and minimum terms." },
+      { text: "Can we start small and add modules later?", detail: "Without re-implementing." },
+      { text: "Can we speak to a customer like us?", detail: "Similar size, industry and countries." },
+    ],
+  },
+};

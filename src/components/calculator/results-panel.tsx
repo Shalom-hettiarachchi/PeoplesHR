@@ -157,7 +157,7 @@ export function ResultsPanel({
           {result.verdict === "low" && (
             <>
               <ButtonLink
-                href={ROUTES.resources}
+                href={`${ROUTES.resources}/how-to-reduce-payroll-errors#how-to-reduce-payroll-errors-without-new-software`}
                 size="lg"
                 className="w-full"
                 onClick={() => cta("guides")}

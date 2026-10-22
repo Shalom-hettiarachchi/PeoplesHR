@@ -154,4 +154,18 @@ dialog::backdrop {
     box-shadow: none !important;
     width: 100% !important;
   }
+
+  /* "Print checklist" prints only the checklist, not the whole guide. */
+  body.print-checklist * {
+    visibility: hidden;
+  }
+  body.print-checklist [data-print-target],
+  body.print-checklist [data-print-target] * {
+    visibility: visible;
+  }
+  body.print-checklist [data-print-target] {
+    position: absolute;
+    inset: 0 0 auto 0;
+    box-shadow: none;
+  }
 }

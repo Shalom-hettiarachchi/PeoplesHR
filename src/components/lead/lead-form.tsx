@@ -16,12 +16,14 @@ export interface LeadFormProps {
   /** Show company and role fields (used for demo requests). */
   extended?: boolean;
   success: ReactNode;
+  /** Called once the lead is saved, e.g. to unlock a checklist. */
+  onSuccess?: () => void;
 }
 
 const fieldClass =
   "mt-1.5 block w-full rounded-xl border border-ink-300 bg-white px-3.5 py-2.5 text-base text-ink-950 placeholder:text-ink-500 focus:border-brand-500 focus:outline-none focus:ring-3 focus:ring-brand-100 aria-invalid:border-coral-500";
 
-export function LeadForm({ source, intent, context = {}, submitLabel, extended, success }: LeadFormProps) {
+export function LeadForm({ source, intent, context = {}, submitLabel, extended, success, onSuccess }: LeadFormProps) {
   const id = useId();
   const [status, setStatus] = useState<Status>("idle");
   const [errors, setErrors] = useState<Record<string, string>>({});
@@ -72,6 +74,7 @@ export function LeadForm({ source, intent, context = {}, submitLabel, extended, 
       const data: { tier?: string } = await res.json();
       track("lead_submitted", { source, intent, tier: data.tier });
       setStatus("success");
+      onSuccess?.();
     } catch {
       setStatus("error");
     }

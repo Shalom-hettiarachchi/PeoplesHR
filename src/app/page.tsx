@@ -32,7 +32,7 @@ const EXPERIENCES = [
     body: "Answer-first HR and payroll guides, built for search and AI discovery, that connect each question to the right tool or next step.",
     href: ROUTES.resources,
     stage: "Research",
-    ready: false,
+    ready: true,
   },
 ];
 
