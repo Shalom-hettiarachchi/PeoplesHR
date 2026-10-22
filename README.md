@@ -80,7 +80,7 @@ Lighthouse 12, production build:
 
 | Page | Mobile (slow 4G) performance | Desktop performance | Accessibility | Best practices | SEO |
 |---|---|---|---|---|---|
-| Home | 92 | 100 | 100 | 100 | 100 |
+| Home | 96 | 100 | 100 | 100 | 100 |
 | Cost calculator | 87 | 100 | 100 | 100 | 100 |
 | Software finder | 88 | 100 | 100 | 100 | 100 |
 | Guides hub | 87 | 100 | 100 | 100 | 100 |

@@ -28,6 +28,7 @@
   /* Positive outcome (time or money recovered) */
   --color-mint-50: #effbf6;
   --color-mint-100: #d8f3e8;
+  --color-mint-300: #6fdcb3;
   --color-mint-500: #12a27a;
   --color-mint-700: #0a6b51;
 
@@ -135,6 +136,26 @@
 .range:focus-visible::-moz-range-thumb {
   outline: 3px solid var(--color-brand-300);
   outline-offset: 2px;
+}
+
+/* Gentle float for the home page preview cards (switched off by reduced motion above). */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Faint dot grid used behind hero sections. */
+.bg-dots {
+  background-image: radial-gradient(var(--color-ink-200) 1px, transparent 1px);
+  background-size: 22px 22px;
 }
 
 dialog::backdrop {

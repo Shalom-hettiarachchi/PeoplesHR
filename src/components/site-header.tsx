@@ -1,26 +1,13 @@
 import Link from "next/link";
 import { ROUTES } from "@/lib/site";
 import { ButtonLink } from "@/components/ui/button";
+import { Logo } from "@/components/logo";
 
 const NAV = [
   { href: ROUTES.calculator, label: "Cost calculator" },
   { href: ROUTES.finder, label: "Software finder" },
   { href: ROUTES.resources, label: "Resources" },
 ];
-
-export function Logo() {
-  return (
-    <span className="flex items-center gap-2 font-extrabold tracking-tight text-ink-950">
-      <span
-        aria-hidden="true"
-        className="grid size-8 place-items-center rounded-lg bg-brand-600 text-sm text-white"
-      >
-        P
-      </span>
-      PeoplesHR
-    </span>
-  );
-}
 
 export function SiteHeader() {
   return (

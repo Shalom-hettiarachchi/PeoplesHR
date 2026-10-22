@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { ROUTES } from "@/lib/site";
-import { Logo } from "@/components/site-header";
+import { Logo } from "@/components/logo";
 
 export function SiteFooter() {
   return (
