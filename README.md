@@ -3,16 +3,18 @@
 Three connected, working web experiences for the PeoplesHR Web Experience Engineer assessment. Each one gives a
 visitor something genuinely useful first, then offers a next step that fits where they are in the buying journey.
 
+**Live site:** https://peopleshr.vercel.app · **Source:** https://github.com/Shalom-hettiarachchi/PeoplesHR
+
 ## Challenges selected
 
 | # | Challenge | Prototype | What the visitor gets | How it converts |
 |---|---|---|---|---|
-| **01** | Visitors cannot quantify the cost of inefficient work | [HR admin cost calculator](http://localhost:3000/tools/hr-admin-cost-calculator) | Hours and money lost to manual HR admin, what's recoverable, and an honest verdict on whether fixing it is worth it | Demo, emailed report or guides, depending on the verdict |
-| **02** | Buyers struggle to identify the right software option | [HR software finder](http://localhost:3000/tools/hr-software-finder) | A package recommendation with the reason for every module, what they don't need, and a comparison | Demo or emailed recommendation, depending on buying timeline |
-| **05** | Useful content does not lead visitors toward solutions | [Guides hub](http://localhost:3000/resources) | Answer-first guides, search that understands everyday wording, embedded calculators, free checklists | Checklist download (content upgrade), then the tools |
+| **01** | Visitors cannot quantify the cost of inefficient work | [HR admin cost calculator](https://peopleshr.vercel.app/tools/hr-admin-cost-calculator) | Hours and money lost to manual HR admin, what's recoverable, and an honest verdict on whether fixing it is worth it | Demo, emailed report or guides, depending on the verdict |
+| **02** | Buyers struggle to identify the right software option | [HR software finder](https://peopleshr.vercel.app/tools/hr-software-finder) | A package recommendation with the reason for every module, what they don't need, and a comparison | Demo or emailed recommendation, depending on buying timeline |
+| **05** | Useful content does not lead visitors toward solutions | [Guides hub](https://peopleshr.vercel.app/resources) | Answer-first guides, search that understands everyday wording, embedded calculators, free checklists | Checklist download (content upgrade), then the tools |
 
 Challenge **04** (turning interest into leads) is addressed across all three: every lead form is a value exchange,
-and every lead arrives scored and summarised for sales (see [Behind the scenes](http://localhost:3000/demo)).
+and every lead arrives scored and summarised for sales (see [Behind the scenes](https://peopleshr.vercel.app/demo)).
 
 ## Run it locally
 
@@ -37,14 +39,14 @@ for canonical URLs, the sitemap, structured data, share images and `llms.txt`.
 
 ## A five-minute tour
 
-1. **Start where a real visitor would:** [How to reduce payroll errors](http://localhost:3000/resources/how-to-reduce-payroll-errors).
+1. **Start where a real visitor would:** [How to reduce payroll errors](https://peopleshr.vercel.app/resources/how-to-reduce-payroll-errors).
    Read the quick answer, try the corrections estimator, then follow its link into the full calculator with your answers carried over.
 2. **In the calculator,** set every process to "Automated". The verdict changes to "Probably not yet" and the call to action
    switches from a demo to free guides. Set them back to manual and request a demo.
-3. **In the [finder](http://localhost:3000/tools/hr-software-finder),** answer the seven questions. Note the reasons, the
+3. **In the [finder](https://peopleshr.vercel.app/tools/hr-software-finder),** answer the seven questions. Note the reasons, the
    "Why not the next package up?" box and how the next step changes with your timeline.
-4. **On the [guides hub](http://localhost:3000/resources),** search for "how do I stop payroll mistakes", then for "pension".
-5. **Open [Behind the scenes](http://localhost:3000/demo):** your leads appear scored and summarised for sales, with a link that
+4. **On the [guides hub](https://peopleshr.vercel.app/resources),** search for "how do I stop payroll mistakes", then for "pension".
+5. **Open [Behind the scenes](https://peopleshr.vercel.app/demo):** your leads appear scored and summarised for sales, with a link that
    replays exactly what the visitor saw, alongside a funnel and the search that found nothing (a content gap).
 
 ## How it meets the brief
@@ -69,7 +71,7 @@ response time (sales-ready, warm or nurture). Searches with no results are logge
 
 **SEO / GEO.** Question-shaped headings and a two-to-three-sentence "Quick answer" at the top of every guide, written to be quoted
 by search snippets and AI assistants. Article, FAQPage, WebApplication, CollectionPage and BreadcrumbList structured data;
-canonical URLs; a sitemap with real update dates; per-guide share images; [`/llms.txt`](http://localhost:3000/llms.txt) listing
+canonical URLs; a sitemap with real update dates; per-guide share images; [`/llms.txt`](https://peopleshr.vercel.app/llms.txt) listing
 every guide with its answer; and real 404 status codes for unknown guide URLs (no soft 404s).
 
 ## Quality checks
