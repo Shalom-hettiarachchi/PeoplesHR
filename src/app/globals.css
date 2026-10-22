@@ -1,0 +1,157 @@
+@import "tailwindcss";
+
+/*
+  Design tokens. Every colour used in the UI comes from here so the three
+  prototypes look like one product. Contrast is checked against white (AA).
+*/
+@theme {
+  --font-sans: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
+
+  --color-brand-50: #f3f2ff;
+  --color-brand-100: #e6e3ff;
+  --color-brand-200: #cdc7ff;
+  --color-brand-300: #a99fff;
+  --color-brand-500: #5b4cf0;
+  --color-brand-600: #4a3bd6;
+  --color-brand-700: #3a2eae;
+  --color-brand-900: #1d1859;
+
+  --color-ink-950: #0b1020;
+  --color-ink-900: #141a2e;
+  --color-ink-700: #374057;
+  --color-ink-500: #5d667d;
+  --color-ink-300: #c3c8d4;
+  --color-ink-200: #e2e5ed;
+  --color-ink-100: #eff1f6;
+  --color-ink-50: #f7f8fb;
+
+  /* Positive outcome (time or money recovered) */
+  --color-mint-50: #effbf6;
+  --color-mint-100: #d8f3e8;
+  --color-mint-500: #12a27a;
+  --color-mint-700: #0a6b51;
+
+  /* Cost / problem */
+  --color-coral-50: #fff4f0;
+  --color-coral-100: #fde3d9;
+  --color-coral-500: #e2582f;
+  --color-coral-700: #a43a19;
+
+  /* Caution */
+  --color-amber-100: #fdf0cf;
+  --color-amber-700: #8a5a00;
+
+  --shadow-card: 0 1px 2px rgb(11 16 32 / 0.04), 0 8px 24px -12px rgb(11 16 32 / 0.12);
+  --shadow-lift: 0 2px 4px rgb(11 16 32 / 0.06), 0 20px 40px -20px rgb(29 24 89 / 0.35);
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background: var(--color-ink-50);
+    color: var(--color-ink-900);
+    font-family: var(--font-sans);
+  }
+
+  :focus-visible {
+    outline: 3px solid var(--color-brand-500);
+    outline-offset: 2px;
+    border-radius: 6px;
+  }
+
+  ::selection {
+    background: var(--color-brand-200);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Range input styling shared by all sliders */
+.range {
+  appearance: none;
+  width: 100%;
+  height: 2.25rem;
+  background: transparent;
+  cursor: pointer;
+}
+.range::-webkit-slider-runnable-track {
+  height: 6px;
+  border-radius: 999px;
+  background: linear-gradient(
+    to right,
+    var(--color-brand-500) 0 var(--fill, 0%),
+    var(--color-ink-200) var(--fill, 0%) 100%
+  );
+}
+.range::-moz-range-track {
+  height: 6px;
+  border-radius: 999px;
+  background: var(--color-ink-200);
+}
+.range::-moz-range-progress {
+  height: 6px;
+  border-radius: 999px;
+  background: var(--color-brand-500);
+}
+.range::-webkit-slider-thumb {
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  margin-top: -8px;
+  border-radius: 999px;
+  background: white;
+  border: 2px solid var(--color-brand-600);
+  box-shadow: 0 2px 6px rgb(11 16 32 / 0.2);
+}
+.range::-moz-range-thumb {
+  width: 22px;
+  height: 22px;
+  border-radius: 999px;
+  background: white;
+  border: 2px solid var(--color-brand-600);
+  box-shadow: 0 2px 6px rgb(11 16 32 / 0.2);
+}
+.range:focus-visible {
+  outline: none;
+}
+.range:focus-visible::-webkit-slider-thumb {
+  outline: 3px solid var(--color-brand-300);
+  outline-offset: 2px;
+}
+.range:focus-visible::-moz-range-thumb {
+  outline: 3px solid var(--color-brand-300);
+  outline-offset: 2px;
+}
+
+dialog::backdrop {
+  background: rgb(11 16 32 / 0.55);
+  backdrop-filter: blur(2px);
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  body {
+    background: white;
+  }
+  .print-full {
+    position: static !important;
+    box-shadow: none !important;
+    width: 100% !important;
+  }
+}
