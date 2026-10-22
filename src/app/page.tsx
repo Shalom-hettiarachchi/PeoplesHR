@@ -24,7 +24,7 @@ const EXPERIENCES = [
     body: "Answer a few questions about your team and get a package recommendation with the modules you need, and the ones you don't.",
     href: ROUTES.finder,
     stage: "Comparing options",
-    ready: false,
+    ready: true,
   },
   {
     challenge: "Challenge 05",
